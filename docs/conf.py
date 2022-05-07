@@ -14,12 +14,7 @@ import os
 import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-sys.path.append(os.path.abspath('../Filtration/src/'))
-sys.path.append(os.path.abspath('../AWS-Utils/src/'))
-sys.path.append(os.path.abspath('../CustomDataset/src/'))
-sys.path.append(os.path.abspath('../ModelManager/src/'))
-sys.path.append(os.path.abspath('../UnifiedImageReader/src/unified_image_reader'))
-sys.path.append(os.path.abspath('../UnifiedImageReader/src/unified_image_reader/adapters/'))
+sys.path.append(os.path.abspath('..'))
 
 
 # -- Project information -----------------------------------------------------

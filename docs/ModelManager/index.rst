@@ -1,1 +1,0 @@
-.. include:: ../../ModelManager/docs/index.rst
