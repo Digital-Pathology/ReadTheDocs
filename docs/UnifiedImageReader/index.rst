@@ -1,0 +1,1 @@
+.. include:: ../../UnifiedImageReader/docs/index.rst
