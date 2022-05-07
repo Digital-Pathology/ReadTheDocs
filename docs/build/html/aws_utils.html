@@ -1,0 +1,244 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>aws_utils package &#8212; Digital Pathology 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dataset package" href="dataset.html" />
+    <link rel="prev" title="filtration package" href="filtration.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dataset.html" title="dataset package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="filtration.html" title="filtration package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digital Pathology 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">aws_utils package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="aws-utils-package">
+<h1>aws_utils package<a class="headerlink" href="#aws-utils-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-aws_utils.glacier_utils">
+<span id="aws-utils-glacier-utils-module"></span><h2>aws_utils.glacier_utils module<a class="headerlink" href="#module-aws_utils.glacier_utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_utils.glacier_utils.authorize">
+<span class="sig-prename descclassname"><span class="pre">aws_utils.glacier_utils.</span></span><span class="sig-name descname"><span class="pre">authorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aws_access_key_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aws_secret_access_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aws_session_token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_utils.glacier_utils.authorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>authorize checks AWS credentials - if authenticated returns True, else initiates login sequence</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aws_access_key_id</strong> (<em>str</em>) – the AWS access key part of your credentials</p></li>
+<li><p><strong>aws_secret_access_key</strong> (<em>str</em>) – the AWS secret access key part of your credentials</p></li>
+<li><p><strong>aws_session_token</strong> (<em>str</em>) – the session token part of your credentials</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if authenticated</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[bool]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_utils.glacier_utils.restore_object">
+<span class="sig-prename descclassname"><span class="pre">aws_utils.glacier_utils.</span></span><span class="sig-name descname"><span class="pre">restore_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">days</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'digpath-data'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_utils.glacier_utils.restore_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>restore_object restores an object in Amazon S3 from Glacier to Standard</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – object key for which image/object to restore</p></li>
+<li><p><strong>days</strong> (<em>int</em>) – how many days the object should be restored for (after this time period, the object will go back into glacier)</p></li>
+<li><p><strong>bucket</strong> (<em>str</em>) – the name of the bucket containing the object to restore</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>stderr if an error occurs when running the command</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[IO[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_utils.glacier_utils.status_update">
+<span class="sig-prename descclassname"><span class="pre">aws_utils.glacier_utils.</span></span><span class="sig-name descname"><span class="pre">status_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'digpath-data'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_utils.glacier_utils.status_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>status_update sends a HEAD request to get the status of object restoration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – object key for which image/object to restore</p></li>
+<li><p><strong>bucket</strong> (<em>str</em>) – the name of the bucket containing the object to restore</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>stderr if an error occurs when executing command, else returns stdout</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[IO[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-aws_utils.s3_sagemaker_utils">
+<span id="aws-utils-s3-sagemaker-utils-module"></span><h2>aws_utils.s3_sagemaker_utils module<a class="headerlink" href="#module-aws_utils.s3_sagemaker_utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="aws_utils.s3_sagemaker_utils.S3SageMakerUtils">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aws_utils.s3_sagemaker_utils.</span></span><span class="sig-name descname"><span class="pre">S3SageMakerUtils</span></span><a class="headerlink" href="#aws_utils.s3_sagemaker_utils.S3SageMakerUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to initiate a s3 sagemaker session</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_utils.s3_sagemaker_utils.S3SageMakerUtils.download_data">
+<span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'digpath-cache'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_utils.s3_sagemaker_utils.S3SageMakerUtils.download_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download local file or directory from S3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – local path where the file or directory should be downloaded to</p></li>
+<li><p><strong>bucket</strong> (<em>str</em>) – name of the s3 bucket to download from</p></li>
+<li><p><strong>key_prefix</strong> – optional s3 object key name prefix</p></li>
+</ul>
+</dd>
+</dl>
+<p>:type str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_utils.s3_sagemaker_utils.S3SageMakerUtils.upload_data">
+<span class="sig-name descname"><span class="pre">upload_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'digpath-cache'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_utils.s3_sagemaker_utils.S3SageMakerUtils.upload_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload local file or directory to S3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path (absolute or relative) of local file or directory to upload</p></li>
+<li><p><strong>bucket</strong> (<em>str</em>) – name of the s3 bucket to upload to</p></li>
+<li><p><strong>key_prefix</strong> (<em>str</em>) – optional s3 object key name prefix, s3 uses the prefix to create a directory structure for the bucket content</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">aws_utils package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-aws_utils.glacier_utils">aws_utils.glacier_utils module</a></li>
+<li><a class="reference internal" href="#module-aws_utils.s3_sagemaker_utils">aws_utils.s3_sagemaker_utils module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="filtration.html"
+                          title="previous chapter">filtration package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="dataset.html"
+                          title="next chapter">dataset package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/aws_utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dataset.html" title="dataset package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="filtration.html" title="filtration package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digital Pathology 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">aws_utils package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Anthony Goncharenko, Saadiya Allahbaksh, Ritik Ghanshani, Adin Solomon, Kevin Karnani, Jesse Rivera, Amanda Warkow.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>
