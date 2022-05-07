@@ -10,6 +10,11 @@ Welcome to Digital Pathology's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+AWS-Utils
+CustomDataset
+Filtration
+ModelManager
+UnifiedImageReader
 
 
 Indices and tables
