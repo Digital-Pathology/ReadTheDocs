@@ -1,0 +1,15 @@
+[submodule "CustomDataset"]
+	path = CustomDataset
+	url = git@github.com:Digital-Pathology/CustomDataset.git
+[submodule "UnifiedImageReader"]
+	path = UnifiedImageReader
+	url = git@github.com:Digital-Pathology/UnifiedImageReader.git
+[submodule "Filtration"]
+	path = Filtration
+	url = git@github.com:Digital-Pathology/Filtration.git
+[submodule "AWS-Utils"]
+	path = AWS-Utils
+	url = git@github.com:Digital-Pathology/AWS-Utils.git
+[submodule "ModelManager"]
+	path = ModelManager
+	url = git@github.com:Digital-Pathology/ModelManager.git
