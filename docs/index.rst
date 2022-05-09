@@ -6,12 +6,6 @@
 Welcome to Digital Pathology's documentation!
 =============================================
 
-.. automodule:: CustomDataset
-.. automodule:: Filtration
-.. automodule:: ModelManager
-.. automodule:: UnifiedImageReader
-.. automodule:: AWS-Utils
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
