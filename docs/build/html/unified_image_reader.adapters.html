@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>unified_image_reader.adapters package &mdash; Digital Pathology 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="adapters package" href="adapters.html" />
+    <link rel="prev" title="unified_image_reader package" href="unified_image_reader.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Digital Pathology
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="filtration.html">filtration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_utils.html">aws_utils package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">dataset package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_manager.html">model_manager package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="unified_image_reader.html">unified_image_reader package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="unified_image_reader.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">unified_image_reader.adapters package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-unified_image_reader.adapters.adapter">unified_image_reader.adapters.adapter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-unified_image_reader.adapters.slideio">unified_image_reader.adapters.slideio module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-unified_image_reader.adapters.vips">unified_image_reader.adapters.vips module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-unified_image_reader.adapters">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader.config">unified_image_reader.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader.image">unified_image_reader.image module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader.image_reader">unified_image_reader.image_reader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adapters.html">adapters package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Digital Pathology</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="unified_image_reader.html">unified_image_reader package</a> &raquo;</li>
+      <li>unified_image_reader.adapters package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/unified_image_reader.adapters.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="unified-image-reader-adapters-package">
+<h1>unified_image_reader.adapters package<a class="headerlink" href="#unified-image-reader-adapters-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-unified_image_reader.adapters.adapter">
+<span id="unified-image-reader-adapters-adapter-module"></span><h2>unified_image_reader.adapters.adapter module<a class="headerlink" href="#module-unified_image_reader.adapters.adapter" title="Permalink to this headline"></a></h2>
+<p>Adapter</p>
+<p>An implementation of image reading behavior that may map specific libraries to working with specific image formats</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.adapter.Adapter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unified_image_reader.adapters.adapter.</span></span><span class="sig-name descname"><span class="pre">Adapter</span></span><a class="headerlink" href="#unified_image_reader.adapters.adapter.Adapter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.adapter.Adapter.get_height">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#unified_image_reader.adapters.adapter.Adapter.get_height" title="Permalink to this definition"></a></dt>
+<dd><p>Get the height property of the image using the adapter library’s implementation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.adapter.Adapter.get_region">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region_coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_dims</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#unified_image_reader.adapters.adapter.Adapter.get_region" title="Permalink to this definition"></a></dt>
+<dd><p>get_region Get a pixel region of the image using the adapter library’s implementation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region_coordinates</strong> (<em>Iterable</em>) – A set of (width, height) coordinates representing the top-left pixel of the region</p></li>
+<li><p><strong>region_dims</strong> (<em>Iterable</em>) – A set of (width, height) coordinates representing the region dimensions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A numpy array representative of the pixel region from the image</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.adapter.Adapter.get_width">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#unified_image_reader.adapters.adapter.Adapter.get_width" title="Permalink to this definition"></a></dt>
+<dd><p>Get the width property of the image using the adapter library’s implementation</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-unified_image_reader.adapters.slideio">
+<span id="unified-image-reader-adapters-slideio-module"></span><h2>unified_image_reader.adapters.slideio module<a class="headerlink" href="#module-unified_image_reader.adapters.slideio" title="Permalink to this headline"></a></h2>
+<p>SlideIO Adapter</p>
+<p>An adapter that uses the SlideIO library to implement image reading behavior
+Adapter currently mapped to reading .svs files</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.slideio.SlideIO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unified_image_reader.adapters.slideio.</span></span><span class="sig-name descname"><span class="pre">SlideIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unified_image_reader.adapters.slideio.SlideIO" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#unified_image_reader.adapters.adapter.Adapter" title="unified_image_reader.adapters.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">unified_image_reader.adapters.adapter.Adapter</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.slideio.SlideIO.get_height">
+<span class="sig-name descname"><span class="pre">get_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#unified_image_reader.adapters.slideio.SlideIO.get_height" title="Permalink to this definition"></a></dt>
+<dd><p>get_height Get the height property of the image using SlideIO’s implementation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Width in pixels</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.slideio.SlideIO.get_region">
+<span class="sig-name descname"><span class="pre">get_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region_coordinates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_dims</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#unified_image_reader.adapters.slideio.SlideIO.get_region" title="Permalink to this definition"></a></dt>
+<dd><p>get_region Get a pixel region of the image using SlideIO’s implementation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region_coordinates</strong> (<em>Iterable</em>) – A set of (width, height) coordinates representing the top-left pixel of the region</p></li>
+<li><p><strong>region_dims</strong> (<em>Iterable</em>) – A set of (width, height) coordinates representing the region dimensions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A numpy array representative of the pixel region from the image</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.slideio.SlideIO.get_width">
+<span class="sig-name descname"><span class="pre">get_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#unified_image_reader.adapters.slideio.SlideIO.get_width" title="Permalink to this definition"></a></dt>
+<dd><p>get_width Get the width property of the image using SlideIO’s implementation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Height in pixels</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-unified_image_reader.adapters.vips">
+<span id="unified-image-reader-adapters-vips-module"></span><h2>unified_image_reader.adapters.vips module<a class="headerlink" href="#module-unified_image_reader.adapters.vips" title="Permalink to this headline"></a></h2>
+<p>VIPS Adapter</p>
+<p>An adapter that uses pyvips, the Python extension of the libvips library, to implement image reading behavior
+Adapter currently mapped to reading .tif, tiff files</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.vips.VIPS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">unified_image_reader.adapters.vips.</span></span><span class="sig-name descname"><span class="pre">VIPS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unified_image_reader.adapters.vips.VIPS" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#unified_image_reader.adapters.adapter.Adapter" title="unified_image_reader.adapters.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">unified_image_reader.adapters.adapter.Adapter</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.vips.VIPS.get_height">
+<span class="sig-name descname"><span class="pre">get_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#unified_image_reader.adapters.vips.VIPS.get_height" title="Permalink to this definition"></a></dt>
+<dd><p>get_height Get the height property of the image using VIPS’ implementation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Height in pixels</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.vips.VIPS.get_region">
+<span class="sig-name descname"><span class="pre">get_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region_coordinates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_dims</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#unified_image_reader.adapters.vips.VIPS.get_region" title="Permalink to this definition"></a></dt>
+<dd><p>get_region Get a pixel region of the image using VIPS’ implementation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region_coordinates</strong> (<em>Iterable</em>) – A set of (width, height) coordinates representing the top-left pixel of the region</p></li>
+<li><p><strong>region_dims</strong> (<em>Iterable</em>) – A set of (width, height) coordinates representing the region dimensions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A numpy array representative of the pixel region from the image</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="unified_image_reader.adapters.vips.VIPS.get_width">
+<span class="sig-name descname"><span class="pre">get_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#unified_image_reader.adapters.vips.VIPS.get_width" title="Permalink to this definition"></a></dt>
+<dd><p>get_height Get the height property of the image using VIPS’ implementation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Height in pixels</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-unified_image_reader.adapters">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-unified_image_reader.adapters" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="unified_image_reader.html" class="btn btn-neutral float-left" title="unified_image_reader package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adapters.html" class="btn btn-neutral float-right" title="adapters package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Anthony Goncharenko, Saadiya Allahbaksh, Ritik Ghanshani, Adin Solomon, Kevin Karnani, Jesse Rivera, Amanda Warkow.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

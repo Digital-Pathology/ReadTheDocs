@@ -17,7 +17,8 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="filtration package" href="filtration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,12 +36,16 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to Digital Pathology’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filtration.html">filtration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_utils.html">aws_utils package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">dataset package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_manager.html">model_manager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unified_image_reader.html">unified_image_reader package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adapters.html">adapters package</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -65,9 +70,72 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-CustomDataset">
-<span id="welcome-to-digital-pathology-s-documentation"></span><h1>Welcome to Digital Pathology’s documentation!<a class="headerlink" href="#module-CustomDataset" title="Permalink to this headline"></a></h1>
-<span class="target" id="module-Filtration"></span><span class="target" id="module-ModelManager"></span><span class="target" id="module-UnifiedImageReader"></span><div class="toctree-wrapper compound">
+  <section id="welcome-to-digital-pathology-s-documentation">
+<h1>Welcome to Digital Pathology’s documentation!<a class="headerlink" href="#welcome-to-digital-pathology-s-documentation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filtration.html">filtration package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="filtration.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filtration.html#module-filtration.filter">filtration.filter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filtration.html#module-filtration.filter_manager">filtration.filter_manager module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aws_utils.html">aws_utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aws_utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aws_utils.html#module-aws_utils.glacier_utils">aws_utils.glacier_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aws_utils.html#module-aws_utils.s3_sagemaker_utils">aws_utils.s3_sagemaker_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aws_utils.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">dataset package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#module-dataset.config">dataset.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#module-dataset.dataset">dataset.dataset module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#module-dataset.filtration_cache">dataset.filtration_cache module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#module-dataset.label_extractor">dataset.label_extractor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#module-dataset.label_manager">dataset.label_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#module-dataset.util">dataset.util module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#module-dataset">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="model_manager.html">model_manager package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model_manager.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_manager.html#module-model_manager.config">model_manager.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_manager.html#module-model_manager.exceptions">model_manager.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_manager.html#module-model_manager.model_manager">model_manager.model_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_manager.html#module-model_manager.util">model_manager.util module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_manager.html#module-model_manager">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unified_image_reader.html">unified_image_reader package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unified_image_reader.adapters.html">unified_image_reader.adapters package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unified_image_reader.adapters.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unified_image_reader.adapters.html#module-unified_image_reader.adapters.adapter">unified_image_reader.adapters.adapter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unified_image_reader.adapters.html#module-unified_image_reader.adapters.slideio">unified_image_reader.adapters.slideio module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unified_image_reader.adapters.html#module-unified_image_reader.adapters.vips">unified_image_reader.adapters.vips module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unified_image_reader.adapters.html#module-unified_image_reader.adapters">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader.config">unified_image_reader.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader.image">unified_image_reader.image module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader.image_reader">unified_image_reader.image_reader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unified_image_reader.html#module-unified_image_reader">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adapters.html">adapters package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adapters.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adapters.html#module-adapters.adapter">adapters.adapter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adapters.html#module-adapters.slideio">adapters.slideio module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adapters.html#module-adapters.vips">adapters.vips module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adapters.html#module-adapters">Module contents</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 <section id="indices-and-tables">
@@ -82,12 +150,14 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="filtration.html" class="btn btn-neutral float-right" title="filtration package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Saadiya Allahbaksh, Ritik Ghanshani, Anthony Goncharenko, Kevin Karnani, Jesse Rivera, Adin B. Solomon, Amanda Warkow.</p>
+    <p>&#169; Copyright 2022, Anthony Goncharenko, Saadiya Allahbaksh, Ritik Ghanshani, Adin Solomon, Kevin Karnani, Jesse Rivera, Amanda Warkow.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
