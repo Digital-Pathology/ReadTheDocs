@@ -21,9 +21,8 @@ submodules:
 
 python:
   install:
-   - requirements:
-      - AWS-Utils/requirements.txt
-      - CustomDataset/requirements.txt
-      - Filtration/requirements.txt
-      - ModelManager/requirements.txt
-      - UnifiedImageReader/requirements.txt
+   - requirements: AWS-Utils/requirements.txt
+   - requirements: CustomDataset/requirements.txt
+   - requirements: Filtration/requirements.txt
+   - requirements: ModelManager/requirements.txt
+   - requirements: UnifiedImageReader/requirements.txt
