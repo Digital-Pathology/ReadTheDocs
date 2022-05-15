@@ -18,3 +18,12 @@ sphinx:
 submodules:
   recursive: false
   include: all
+
+python:
+  install:
+   - requirements:
+      - AWS-Utils/requirements.txt
+      - CustomDataset/requirements.txt
+      - Filtration/requirements.txt
+      - ModelManager/requirements.txt
+      - UnifiedImageReader/requirements.txt
