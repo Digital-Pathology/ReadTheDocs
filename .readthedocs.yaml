@@ -12,11 +12,11 @@ build:
     python: "3.9"
   jobs:
     pre_create_environment:
-      - pip install -e AWS-Utils/
-      - pip install -e CustomDataset/
+      - pip install -e UnifiedImageReader/
       - pip install -e Filtration/
       - pip install -e ModelManager/
-      - pip install -e UnifiedImageReader/
+      - pip install -e CustomDataset/
+      - pip install -e AWS-Utils/
     
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
