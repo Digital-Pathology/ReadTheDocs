@@ -10,13 +10,7 @@ build:
   os: ubuntu-20.04
   tools:
     python: "3.9"
-  jobs:
-    pre_build:
-      - pip install -r AWS-Utils/requirements.txt
-      - pip install -r CustomDataset/requirements.txt
-      - pip install -r Filtration/requirements.txt
-      - pip install -r ModelManager/requirements.txt
-      - pip install -r UnifiedImageReader/requirements.txt
+    
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
    configuration: docs/source/conf.py
@@ -24,3 +18,11 @@ sphinx:
 submodules:
   recursive: false
   include: all
+
+python:
+  install:
+   - requirements: ./AWS-Utils/requirements.txt
+   - requirements: ./CustomDataset/requirements.txt
+   - requirements: ./Filtration/requirements.txt
+   - requirements: ./ModelManager/requirements.txt
+   - requirements: ./UnifiedImageReader/requirements.txt
