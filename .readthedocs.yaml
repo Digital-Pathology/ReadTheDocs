@@ -12,8 +12,12 @@ build:
     python: "3.9"
   jobs:
     pre_create_environment:
-      - echo `ls`
-      - echo `pwd`
+      - pip install -e AWS-Utils/
+      - pip install -e CustomDataset/
+      - pip install -e Filtration/
+      - pip install -e ModelManager/
+      - pip install -e UnifiedImageReader/
+`
     
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
@@ -22,11 +26,3 @@ sphinx:
 submodules:
   recursive: false
   include: all
-
-python:
-  install:
-   - requirements: ./AWS-Utils/requirements.txt
-   - requirements: ./CustomDataset/requirements.txt
-   - requirements: ./Filtration/requirements.txt
-   - requirements: ./ModelManager/requirements.txt
-   - requirements: ./UnifiedImageReader/requirements.txt
