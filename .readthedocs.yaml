@@ -25,3 +25,6 @@ sphinx:
 submodules:
   recursive: false
   include: all
+
+python:
+  system_packages: true

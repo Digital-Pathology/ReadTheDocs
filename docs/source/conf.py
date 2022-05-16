@@ -32,7 +32,7 @@ release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 
-autodoc_mock_imports = ["numpy", "boto3", "cloudpickle", "slideio", "vips", "torch", "cv2", "tqdm", "histolab", "pyvips", "sagemaker", "unified_image_reader", "tables"]
+autodoc_mock_imports = ["numpy", "boto3", "cloudpickle", "slideio", "vips", "torch", "cv2", "tqdm", "histolab", "pyvips", "sagemaker", "tables"]
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
