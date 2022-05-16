@@ -17,7 +17,6 @@ build:
       - pip install -e Filtration/
       - pip install -e ModelManager/
       - pip install -e UnifiedImageReader/
-`
     
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
