@@ -12,6 +12,10 @@ build:
     python: "3.9"
   jobs:
     pre_create_environment:
+      - pip --version
+      - python --version
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
       - pip install -e UnifiedImageReader/
       - pip install -e Filtration/
       - pip install -e ModelManager/
